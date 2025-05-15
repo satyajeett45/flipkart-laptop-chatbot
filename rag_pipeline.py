@@ -40,7 +40,7 @@ def _answer_query(parsed_query):
         docs = docs[docs["Description"].str.contains(storage_type, case=False, na=False)]
 
     context = "\n".join(
-        f"Name: {row['Name']}\nPrice: ₹{row['Price']}\nDescription: {row['Description']}\n"
+        f"Name: {row['Name']}\nPrice: ₹{row['Price']}\nDescription: {row['Description']}\nURL: ₹{row['URL']}\n"
         for _, row in docs.iterrows()
     )
 
